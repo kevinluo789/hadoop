@@ -1,0 +1,38 @@
+<configuration>
+
+    <!-- 设置YARN集群主角色运行机器位置 -->
+    <property>
+        <name>yarn.resourcemanager.hostname</name>
+        <value>node1</value>
+    </property>
+
+    <property>
+        <name>yarn.nodemanager.aux-services</name>
+        <value>mapreduce_shuffle</value>
+    </property>
+
+    <!-- 是否将对容器实施物理内存限制（因使用虚拟机，内存较小， 生产环境可去掉）-->
+    <property>
+        <name>yarn.nodemanager.pmem-check-enabled</name>
+        <value>false</value>
+    </property>
+
+    <!-- 是否将对容器实施虚拟内存限制（因使用虚拟机，内存较小， 生产环境可去掉） -->
+    <property>
+        <name>yarn.nodemanager.vmem-check-enabled</name>
+        <value>false</value>
+    </property>
+
+    <!-- 开启日志聚集 -->
+    <property>
+        <name>yarn.log-aggregation-enable</name>
+        <value>true</value>
+    </property>
+
+    <!-- 设置yarn历史服务器地址 -->
+    <property>
+        <name>yarn.log.server.url</name>
+        <value>http://node1:19888/jobhistory/logs</value>
+    </property>
+
+</configuration>

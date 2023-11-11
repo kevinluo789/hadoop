@@ -1,0 +1,9 @@
+<configuration>
+
+    <!-- 设置SecondaryNameNode进程运行机器位置信息 -->
+    <property>
+        <name>dfs.namenode.secondary.http-address</name>
+        <value>node2:9868</value>
+    </property>
+
+</configuration>
